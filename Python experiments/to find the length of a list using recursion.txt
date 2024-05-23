@@ -1,6 +1,0 @@
-def count_elements_recursion(lst):
-    if not lst:
-        return 0
-    return 1 + count_elements_recursion(lst[1:])
-lst=[1,2,3,4]
-print("The length of the list is:", count_elements_recursion(lst))
