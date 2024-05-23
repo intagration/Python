@@ -1,0 +1,9 @@
+user_string = input("Enter a string: ")
+user_word = input("Enter a word to count: ")
+count= 0
+words_list = user_string.split()
+
+for word in words_list:
+    if word == user_word:
+        count += 1
+print(f"The word '{user_word}' appears {count} times in the string.")

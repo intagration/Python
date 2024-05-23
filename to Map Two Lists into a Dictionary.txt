@@ -1,0 +1,15 @@
+keys_list = []
+values_list = []
+
+num_elements = int(input("Enter the number of elements in the lists: "))
+
+print("Enter elements for keys list:")
+for _ in range(num_elements):
+    keys_list.append(input())
+
+print("Enter elements for values list:")
+for _ in range(num_elements):
+    values_list.append(input())
+
+result_dict = dict(zip(keys_list, values_list))
+print("Mapped dictionary:", result_dict)

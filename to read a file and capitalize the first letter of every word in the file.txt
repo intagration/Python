@@ -1,0 +1,72 @@
+#Reading File:
+
+import os
+file=open("D:\Hello.txt", "r")
+print(file.read())
+
+
+
+
+
+#Capitalizing First Letter:
+
+filename=input("Enter the name of your file:")
+
+with open(filename, "r") as f:
+    for line in f:
+        l=line.title()
+        print(l)
+
+
+
+
+#Writing Content over File:
+
+fname=open("D:\Hello.txt", "w")
+word_list=[]
+
+for i in range(1):
+    print("Enter your data:")
+    line=input()
+    word_list.append(line)
+    fname.writelines(word_list)
+    fname.close()
+
+
+
+#Using Capitalize method:
+
+result=""
+file=open("Hello.txt", "r")
+
+for line in file:
+    s=line.split()
+    for element in s:
+        if len(result)>0:
+            result=result+" "+element.strip().capitalize()
+        else:
+            result=element.capitalize()
+
+print(result)
+
+
+
+
+#Using Regular Expression:
+
+import re
+def convert_to_uppercase(m):
+    return m.group(1)+ m.group(2).upper()
+
+result=" "
+file=open("Hello.txt", "r")
+for line in file:
+    l=line.split()
+
+    for element in l:
+        if len(result)>0:
+            result=result+ re.sub("(^|\s)(\S)", convert_to_uppercase, element)+" "
+        else:
+            result=re.sub("(^|\s)(\S)", convert_to_uppercase, element)
+
+print(result)
