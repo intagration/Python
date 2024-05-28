@@ -14,9 +14,9 @@ elif 80<=percentage<90:
 elif 70<=percentage<80:
    grade="B"
 elif 60<=percentage<70:
-   grade="A"
+   grade="C"
 elif 50<=percentage<60:
-   grade="A"
+   grade="D"
 else:
    grade="F"
 print("percentage:",percentage)
